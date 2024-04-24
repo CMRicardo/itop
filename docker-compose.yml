@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  my-itop:
+    image: vbkunin/itop
+    ports:
+      - "8080:80"
+    volumes:
+      - my-itop-conf-volume:/var/www/html/conf
+      - my-itop-db-volume:/var/lib/mysql
+
+volumes:
+  my-itop-conf-volume:
+  my-itop-db-volume:
